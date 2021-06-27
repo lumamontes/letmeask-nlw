@@ -46,7 +46,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
 
   async function signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
-
+    console.log(provider)
     const result = await auth.signInWithPopup(provider);
 
     if (result.user) {
